@@ -20,7 +20,6 @@ import com.thanglequoc.department.Department;
 public class Employee implements Serializable {
     
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="employee_id")
     private Long id;
@@ -29,8 +28,9 @@ public class Employee implements Serializable {
     private String name;
     
     
-    @Column(name="salary")
+    @Column(name="salary", nullable = true)
     private Double salary;
+    
     
     /**
      * One employee -> One department || One department -> many employee
