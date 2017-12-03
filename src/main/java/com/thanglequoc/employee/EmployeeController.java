@@ -20,7 +20,7 @@ public class EmployeeController {
 	return "This should get all employees";
     }
     
-    @RequestMapping(value="", produces = "application/json", method = RequestMethod.POST)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public String addEmployee(@RequestBody Employee employee){
 	String message = "";
 	if(Objects.nonNull(employee)){
