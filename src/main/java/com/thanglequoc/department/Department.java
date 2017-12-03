@@ -30,7 +30,6 @@ public class Department {
     @OneToMany(mappedBy="department", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Employee> employee;
 
-
     /**
      * @return the id
      */
